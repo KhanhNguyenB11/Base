@@ -24,7 +24,6 @@ const activeColor = {
 
 const baseButtonStyle: CSSProperties = {
   width: "fit-content",
-  minWidth: 120,
   fontSize: 16,
   fontWeight: 700,
   lineHeight: "22.4px",
@@ -76,8 +75,7 @@ const getButtonStyle = (
       buttonStyle.lineHeight = "22.4px";
       break;
   }
-  buttonStyle.padding = `${buttonStyle.fontSize * 1.5}px ${0.5 * buttonStyle.fontSize}px`;
-  buttonStyle.height = `${buttonStyle.fontSize }px`;
+  buttonStyle.padding = `${buttonStyle.fontSize * 1.25}px ${ buttonStyle.fontSize * 1.5}px`;
   return buttonStyle;
 };
 
@@ -105,7 +103,6 @@ const CustomButton: FC<ButtonProps> = ({
   );
 };
 
-export default CustomButton;
 
 const StyledButton = styled(CustomButton)<ButtonProps>`
   &:hover {
@@ -122,6 +119,8 @@ const StyledButton = styled(CustomButton)<ButtonProps>`
   }
 `;
 
-export const TestButton: FC<ButtonProps> = (props) => (
+   const ButtonV1: FC<ButtonProps> = (props) => (
   <StyledButton {...props}>{props.children}</StyledButton>
 );
+
+export default ButtonV1;
