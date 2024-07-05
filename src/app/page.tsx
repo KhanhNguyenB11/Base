@@ -7,6 +7,7 @@ import TableV1 from "@/components/table/TableV1";
 import PricingCard from "@/components/pricing/PricingCard";
 import { Flex } from "antd";
 import { PricingPlanLandingPageType } from "@/interfaces/PricingPlan";
+import Login from "@/containers/login/Login";
 
 export default function Home() {
   const dummyPricingPlanLandingPage: PricingPlanLandingPageType = {
@@ -82,10 +83,11 @@ export default function Home() {
   ];
   return (
     <Flex style={{width: "100%"}}>
-      <TableV1 columns={columns} tableTitle="Permission" dataSource={dummyData} showSearchBar></TableV1>
+      {/* <TableV1 columns={columns} tableTitle="Permission" dataSource={dummyData} showSearchBar></TableV1> */}
       {/* <PricingCard PricingPlan={dummyPricingPlanLandingPage}></PricingCard>
       <PricingCard isPrimary={true} PricingPlan={dummyPricingPlanLandingPage}></PricingCard>
       <PricingCard PricingPlan={dummyPricingPlanLandingPage}></PricingCard> */}
+      <Login></Login>
     </Flex>
   );
 }
